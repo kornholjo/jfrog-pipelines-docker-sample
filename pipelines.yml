@@ -12,21 +12,21 @@ resources:
     configuration:
       registry: katol_test_github_integration                                # <-- replace with your artifactory integration
       sourceRepository: docker_local               # <-- required if registry is Artifactory
-      imageName: partnerenttest.jfrog.io/karol-build-test/hello-world  # < -- replace with your image path and name
+      imageName: partnerenttest.jfrog.io/docker-local/dbp  # < -- replace with your image path and name
       imageTag: latest
       autoPull: true
       
   - name: dbp_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: art
+      sourceArtifactory: katol_test_github_integration
       buildName: dbp_build
       buildNumber: 1    
 
   - name: dbp_promoted_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: art
+      sourceArtifactory: katol_test_github_integration
       buildName: dbp_build
       buildNumber: 1
       
