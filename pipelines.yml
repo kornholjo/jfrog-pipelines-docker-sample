@@ -2,7 +2,7 @@ resources:
   - name: dbp_repo
     type: GitRepo
     configuration:
-      gitProvider: karol_artifactory_integration       # <-- replace with your integration
+      gitProvider: katol_test_github_integration       # <-- replace with your integration
       path: kornholjo/jfrog-pipelines-docker-sample    # <-- replace with your repository name
       branches:
         include: master
@@ -72,7 +72,7 @@ pipelines:
         configuration:
           targetRepository: demo-pipelines
           integrations:
-            - name: art
+            - name: karol_artifactory_integration
           inputResources:
             - name: dbp_build_info
           outputResources:
